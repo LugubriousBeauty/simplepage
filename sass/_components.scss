@@ -1,0 +1,118 @@
+$color-main: #0052FF;
+@mixin font-style {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-btn {
+    background-color: $color-main;
+    color:white;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    &:hover {
+        background-color: #054ce4
+    }
+}
+
+.secondary-btn {
+    @extend .main-btn;
+    font-weight: 500;
+    padding: 0.625rem 0.75rem;
+}
+
+.sign-btn {
+    @extend .secondary-btn;
+    &:hover {
+        color: $color-main;
+        background-color: white;
+    }
+    margin: 0;
+    @include font-style();
+}
+
+.main-menu {
+    li {
+        margin: 0px 1.5rem;
+        font-size: 0.80srem;
+        list-style: none;
+        display: inline;
+        @include font-style();
+        a {
+            color: #000;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.benefit-cards .benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .bi {
+        margin-bottom: -3rem;
+        color: $color-main;
+        font-size: 7rem;
+    }
+    .content {
+        width: 20rem;
+        .text {
+            color: #65636E;
+            font-size: 1rem;
+            margin: 1rem 0px 1.5rem;
+            text-align: center;
+        }
+        .title {
+            text-align: center;
+        }
+        margin-bottom: -1.5rem;
+    }
+    .link {
+        font-weight: 600;
+        color: $color-main;
+        text-align: center;
+    }
+}
+
+.benefit-cards .benefit-envelope, .benefit-shield {
+    @extend .benefit-cards, .benefit;
+}
+
+.benefit-cards .benefit-envelope {
+    .bi {
+        margin-bottom: 1rem;
+        font-size: 4rem;
+    }
+    .content {
+        margin-bottom: -6.2rem;
+        margin-top: -3rem;
+    }
+}
+
+.benefit-cards .benefit-shield {
+    @extend .benefit-cards, .benefit-envelope;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    .bi {
+        margin-bottom: -1rem;
+        color:$color-main;
+        font-size: 6rem;
+    }
+    .title {
+        text-align: center;
+    }
+}

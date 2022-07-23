@@ -1,0 +1,216 @@
+@use "components";
+$border-color: #DEDFE2;
+$small-text-color: #5B616E;
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    border-bottom: solid 1px $border-color;
+}
+
+.navbar img {
+    height: 1.25rem;
+    width: 7rem;
+}
+
+.sec-home {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    .home-cta {
+        flex: 1;
+        padding-left: 7rem;
+        margin-top: -3rem;
+        .cta-text {
+            font-weight: 600;
+            color: components.$color-main;
+            margin-bottom: -2rem;
+            i {
+                font-size: 1.2rem;
+                align-items: center;
+            }
+        }
+        .home-title {
+            width: 20rem;
+            font-size: 3.5rem;
+        }
+        .lead-magnet {
+            input {
+                padding: 1.5rem 3rem;
+                border-radius: 0.25rem;
+                border: solid 1px $border-color;
+            }
+             ::placeholder {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+    }
+    .home-desc {
+        margin-top: -1.75rem;
+        width: 30rem;
+    }
+
+    .home-img {
+        margin-top: 3.5rem;
+        margin-right: 4rem;
+    }
+}
+
+.sec-features {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    padding: 5rem;
+    .intro {
+        margin-bottom: 2.5rem;
+        p {
+            color: $small-text-color;
+            font-weight: 500;
+            text-align: center;
+        }
+        h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+    }
+
+    .features {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin: auto;
+        .text {
+            max-width: 40%;
+            .feature {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                margin-left: -7rem;
+                .icon {
+                    font-size: 2.5rem;
+                    color: components.$color-main;
+                }
+                .description {
+                    margin-left: 1rem;
+                    .title {
+                        font-size: 1.25rem;
+                    }
+                    .description-text {
+                        color: $small-text-color;
+                        width: 19rem;
+                        margin-top: -1rem;
+                        width: 100%
+                    }
+                }
+            }
+        }
+        .big-img img {
+            max-width: 30rem;
+        }
+    }
+}
+
+.sec-benefits {
+    border-top: 1px solid #ccc; 
+    @extend .sec-features, .intro;
+    .benefit-cards {
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .benefit {
+            display: flex;
+            flex-direction: column;
+            .env {
+                font-size: 4rem;
+            }
+            .shield {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+.sec-kpis {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 13.5rem;
+    width: 100%;
+    background-color: components.$color-main;
+    .kpi {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color:white;
+        .number {
+            font-weight: 600;
+            font-size: 4rem;
+        }
+        .desc {
+            color: #9CBCFF;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.sec-onboarding {
+    @extend .sec-benefits;
+    .onboarding-cards {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .bi {
+                font-size: 5rem;
+                color: components.$color-main;
+                margin-bottom: 3rem;
+            }
+            .content {
+                font-size: 0.80rem;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.sec-footer {
+    width: 100%;
+    height: 28.75rem;
+    background-color: #F5F8FF;
+    display: flex;
+    align-items: center;
+    .content {
+        padding-left: 7rem;
+        margin-top: -3rem;
+        .text {
+            width: 23rem;
+            .title {
+                font-size: 2rem;
+            }
+            .desc {
+                margin-top: -0.5rem;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+        }
+    }
+}
